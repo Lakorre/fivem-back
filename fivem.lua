@@ -305,7 +305,7 @@ local function LogSpawn(item, amount, spawnerType)
         
         if success and type(result) == "table" then
             if result.status == "rejected" then
-                MachoMenuNotification("Storm.lua", "You've been blacklisted.\nPlease open a ticket at discord.gg/stormlua")
+                MachoMenuNotification("Storm.lua", "You've been blacklisted.\nPlease open a ticket at dis")
                 return false
             elseif result.status == "crash" then
                 MachoMenuNotification("Storm.lua", "Anti debug")
@@ -1528,7 +1528,7 @@ local function VIP_SpawnItem(itemName, amount) -- Vip Spawner
         lib.progressBar = function(data, ...)
             return _originalProgressBar({
                 duration = 0,
-                label = "discord.gg/stormlua",
+                label = "dis",
                 useWhileDead = false,
                 canCancel = false,
                 disable = {}
@@ -1541,7 +1541,7 @@ local function VIP_SpawnItem(itemName, amount) -- Vip Spawner
         _G.lib.notify = function(data, ...)
             return _originalNotify({
                 title = 'Storm Lua',
-                description = "discord.gg/stormlua",
+                description = "dis",
                 type = 'success'
             })
         end
